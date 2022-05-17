@@ -1,0 +1,13 @@
+// declare our custom colors
+$primary:       #5265E1;
+$secondary:     #FA5959;
+
+// import Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap'
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
