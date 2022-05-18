@@ -2,12 +2,41 @@
 $primary:       #5265E1;
 $secondary:     #FA5959;
 
+
+// add position values
+$position-values: (
+  0: 0,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+// custom toggle icon for navbar
+$navbar-dark-toggler-icon-bg:  url("../images/icon-hamburger.svg");
+$navbar-light-toggler-icon-bg:  url("../images/icon-hamburger.svg");
+
+// for the background decoration 
+.half-pill-left {
+    border-top-left-radius: 50em;
+    border-bottom-left-radius: 50em;
+}
+
 // import Bootstrap
-@import '../node_modules/bootstrap/scss/bootstrap'
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// no borders in navbar-toggler button
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+}
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
-.navbar-toggler-icon:focus {
+.navbar-toggler-icon:focus
+.navbar-toggler-icon:active {
     outline: none;
     box-shadow: none;
 }
