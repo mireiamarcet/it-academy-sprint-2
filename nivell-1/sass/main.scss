@@ -22,7 +22,6 @@ $navbar-light-toggler-icon-bg:  url("../images/icon-hamburger.svg");
 $nav-link-color: gray;
 $nav-link-hover-color: $secondary;
 
-
 // import Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 
@@ -53,23 +52,20 @@ $nav-link-hover-color: $secondary;
 
 // custom nav tabs
 .nav-tabs {
-    border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+    border-bottom: none;
 
     .nav-link {
-        &:link,
-        &:visited,
-        &:hover,
-        &:focus,
-        &:default {
-          border-color: transparent;
-        }
+        border: none;
+        border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+        outline: none;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
     }
   
     .nav-link.active {
-      border: none;
-      border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+      border-bottom: $nav-tabs-border-width solid $secondary;
       border-width: 0.3rem;
-      border-color: $secondary;
     }
     
   
