@@ -69,7 +69,7 @@
 
             <!-- nav tabs -->
             <div class="row justify-content-center align-items-center">
-                <div class="col-sm-8 text-center mt-1 mb-5">
+                <div class="col-sm-8 text-center mt-1 mb-3">
                     <ul class="nav nav-tabs nav-fill flex-column flex-sm-row" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="bookmarking-tab" data-bs-toggle="tab" data-bs-target="#bookmarking" type="button" role="tab" aria-controls="bookmarking" aria-selected="true">Simple Bookmarking</button>
@@ -84,58 +84,55 @@
                 </div>
             </div>
 
-            <!-- content tabs-->  
-            <div class="tab-content">
-                <!-- tab content 1-->
-                <div class="tab-pane active" id="bookmarking" role="tabpanel" aria-labelledby="bookmarking-tab">
-                    <div class="row my-5 justify-content-center align-items-center">
-                        <div class="col-sm-6 position-relative mb-5 mb-sm-1">
-                            <div class="bg-primary half-pill-right w-100 h-100 position-absolute top-25 end-20 z-index-n1"></div>
-                            <img src="images/illustration-features-tab-1.svg" class="img-fluid position-relative z-index-n2" alt="illustration of bookmark manager">
-                            
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 justify-content-center align-items-center mb-sm-5">
+                    <!-- content tabs-->  
+                     <div class="tab-content">
+                        <!-- tab content 1-->
+                        <div class="tab-pane active" id="bookmarking" role="tabpanel" aria-labelledby="bookmarking-tab">
+                            <div class="row my-5 justify-content-center align-items-center">
+                                <div class="col-sm-6 position-relative mb-5 mb-sm-1">
+                                    <div class="bg-primary half-pill-right w-100 h-100 position-absolute top-25 end-20 z-index-n1"></div>
+                                    <img src="images/illustration-features-tab-1.svg" class="img-fluid position-relative z-index-n2" alt="illustration of bookmark manager">
+                                </div>
+                                <div class="col-sm-6 text-center text-sm-start my-5 my-sm-1">
+                                    <h2>Bookmark in one click</h2>
+                                    <p class="text-muted my-3">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
+                                    <a href="#" class="btn btn-primary px-3 py-2 d-none d-sm-inline"><small>More Info</small></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6 text-center text-sm-start my-5 my-sm-1">
-                            <h2>Bookmark in one click</h2>
-                            <p class="text-muted my-3">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
-                            <a href="#" class="btn btn-primary px-3 py-2 d-none d-sm-inline"><small>More Info</small></a>
+                        <!-- tab content 2-->
+                        <div class="tab-pane" id="searching" role="tabpanel" aria-labelledby="searching-tab">
+                            <div class="row my-5 justify-content-center align-items-center">
+                                <div class="col-sm-6 position-relative mb-5 mb-sm-1">
+                                    <div class="bg-primary half-pill-right w-100 h-100 position-absolute top-25 end-20 z-index-n1"></div>
+                                    <img src="images/illustration-features-tab-2.svg" class="img-fluid position-relative z-index-n2" alt="illustration of bookmark manager">
+                                </div>
+                                <div class="col-sm-6 text-center text-sm-start my-5 my-sm-1">
+                                    <h2>Intelligent search</h2>
+                                    <p class="text-muted my-3">Our powerful search feature will help you find saved sites in no time at all No need to trawl through all of your bookmarks.</p>
+                                    <a href="#" class="btn btn-primary px-3 py-2 d-none d-sm-inline"><small>More Info</small></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <!-- tab content 2-->
-                <div class="tab-pane" id="searching" role="tabpanel" aria-labelledby="searching-tab">
-                    <div class="row my-5 justify-content-center align-items-center">
-                        <div class="col-sm-6 position-relative mb-5 mb-sm-1">
-                            <div class="bg-primary half-pill-right w-100 h-100 position-absolute top-25 end-20 z-index-n1"></div>
-                            <img src="images/illustration-features-tab-2.svg" class="img-fluid position-relative z-index-n2" alt="illustration of bookmark manager">
-                            
-                        </div>
-                        <div class="col-sm-6 text-center text-sm-start my-5 my-sm-1">
-                            <h2>Intelligent search</h2>
-                            <p class="text-muted my-3">Our powerful search feature will help you find saved sites in no time at all No need to trawl through all of your bookmarks.</p>
-                            <a href="#" class="btn btn-primary px-3 py-2 d-none d-sm-inline"><small>More Info</small></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- tab content 3-->
-                <div class="tab-pane" id="sharing" role="tabpanel" aria-labelledby="sharing-tab">
-                    <div class="row my-5 justify-content-center align-items-center">
-                        <div class="col-sm-6 position-relative mb-5 mb-sm-1">
-                            <div class="bg-primary half-pill-right w-100 h-100 position-absolute top-25 end-20 z-index-n1"></div>
-                            <img src="images/illustration-features-tab-3.svg" class="img-fluid position-relative z-index-n2" alt="illustration of bookmark manager">
-                            
-                        </div>
-                        <div class="col-sm-6 text-center text-sm-start my-5 my-sm-1">
-                            <h2>Share your bookmarks</h2>
-                            <p class="text-muted my-3">Easily share your bookmarks and collections with others. Create a sharable link that you can send at the click of a button.</p>
-                            <a href="#" class="btn btn-primary px-3 py-2 d-none d-sm-inline"><small>More Info</small></a>
+                        <!-- tab content 3-->
+                        <div class="tab-pane" id="sharing" role="tabpanel" aria-labelledby="sharing-tab">
+                            <div class="row my-5 justify-content-center align-items-center">
+                                <div class="col-sm-6 position-relative mb-5 mb-sm-1">
+                                    <div class="bg-primary half-pill-right w-100 h-100 position-absolute top-25 end-20 z-index-n1"></div>
+                                    <img src="images/illustration-features-tab-3.svg" class="img-fluid position-relative z-index-n2" alt="illustration of bookmark manager">
+                                </div>
+                                <div class="col-sm-6 text-center text-sm-start my-5 my-sm-1">
+                                    <h2>Share your bookmarks</h2>
+                                    <p class="text-muted my-3">Easily share your bookmarks and collections with others. Create a sharable link that you can send at the click of a button.</p>
+                                    <a href="#" class="btn btn-primary px-3 py-2 d-none d-sm-inline"><small>More Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-              
-
-                   
-
         </div>
     </section>
 
