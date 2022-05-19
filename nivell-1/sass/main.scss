@@ -1,9 +1,10 @@
 // declare our custom colors
 $primary:       #5265E1;
 $secondary:     #FA5959;
+$text-muted:    #93919C;
 
 
-// add position values
+// adding more position values
 $position-values: (
   0: 0,
   15: 15%,
@@ -14,6 +15,27 @@ $position-values: (
   100: 100%
 );
 
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// adding a new width value
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (40: 40%),
+        ),
+      ),
+    ),
+  )
+);
+
 // custom toggle icon for navbar
 $navbar-dark-toggler-icon-bg:  url("../images/icon-hamburger.svg");
 $navbar-light-toggler-icon-bg:  url("../images/icon-hamburger.svg");
@@ -21,6 +43,7 @@ $navbar-light-toggler-icon-bg:  url("../images/icon-hamburger.svg");
 // custom nav tabs
 $nav-link-color: gray;
 $nav-link-hover-color: $secondary;
+
 
 // import Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -70,3 +93,15 @@ $nav-link-hover-color: $secondary;
     
   
 }
+
+// custom card
+.custom-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+// border with dotted style
+.border-dotted{
+    border-bottom: thick dotted #dcdbe6;
+}
+
