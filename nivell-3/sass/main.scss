@@ -1,0 +1,200 @@
+// declare our custom colors
+$primary:       #5265E1;
+$secondary:     #FA5959;
+$text-muted:    #93919C;
+
+
+// adding more position values
+$position-values: (
+  0: 0,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  50: 50%,
+  75: 75%,
+  90: 90%,
+  100: 100%
+);
+
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// adding a new width value
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (40: 40%),
+        ),
+      ),
+    ),
+  )
+);
+
+// custom toggle icon for navbar
+$navbar-dark-toggler-icon-bg:  url("../images/icon-hamburger.svg");
+$navbar-light-toggler-icon-bg:  url("../images/icon-hamburger.svg");
+
+// custom nav tabs
+$nav-link-color: gray;
+$nav-link-hover-color: $secondary;
+
+// custom accordion
+$accordion-color:                         none;
+$accordion-bg:                            none;
+$accordion-button-focus-border-color:     none;
+$accordion-button-focus-box-shadow:       none;
+$accordion-button-active-bg:              none;
+$accordion-button-active-color:           black;
+$accordion-button-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='12'><path fill='none' stroke='#{$primary}' stroke-width='3' d='M1 1l8 8 8-8'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='12'><path fill='none' stroke='#{$secondary}' stroke-width='3' d='M1 1l8 8 8-8'/></svg>");
+
+
+// import Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// for the background decoration 
+.half-pill-left {
+    border-top-left-radius: 50em;
+    border-bottom-left-radius: 50em;
+}
+
+.half-pill-right {
+    border-top-right-radius: 50em;
+    border-bottom-right-radius: 50em;
+}
+
+// no borders in navbar-toggler button
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus
+.navbar-toggler-icon:active {
+    outline: none;
+    box-shadow: none;
+}
+
+// custom nav tabs
+.nav-tabs {
+
+    border-bottom: none;
+
+    .nav-link {
+        border: none;
+        border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+        outline: none;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+  
+    .nav-link.active {
+      border-bottom: $nav-tabs-border-width solid $secondary;
+      border-width: 0.3rem;
+    }
+    
+  
+}
+
+// custom card
+.custom-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+// border with dotted style
+.border-dotted{
+    border-bottom: thick dotted #dcdbe6;
+}
+
+
+// custom accordion
+.accordion-button:hover{
+    color: $secondary;
+}
+
+// custom form feedback
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    border-color: $secondary;
+    border-width: 0.15em;
+    background-image: url('../images/icon-error.svg');
+}
+
+.invalid-tooltip {
+    position: absolute;
+    top: 100%;
+    display: none;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0;
+    font-style: italic;
+    color: #fff;
+    background-color: $secondary;
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+// custom behaviours on hover
+.navbar-light .navbar-nav .nav-link {
+  color: $text-muted;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $secondary;
+}
+
+.btn-secondary {
+  color: white;
+}
+
+.btn-secondary:hover {
+  color: $secondary;
+  background-color: white;
+  border-color: $secondary;
+}
+
+.bottom-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out;
+  color: white;
+}
+
+.bottom-link:hover {
+  color: $secondary;
+}
+
+.bottom-icon-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-fb {
+  background-image: url('../images/icon-facebook.svg');  
+}
+
+.icon-fb:hover {
+  background-image: url('../images/icon-facebook-hover.svg');  
+}
+
+.icon-tw {
+  background-image: url('../images/icon-twitter.svg');
+}
+
+.icon-tw:hover {
+  background-image: url('../images/icon-twitter-hover.svg');
+}
