@@ -110,7 +110,21 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 .custom-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     border-radius: 15px;
+    margin-top: 3rem;
 }
+
+@media (min-width: 576px) {
+  .card-group {
+    &>:nth-child(2) {
+      margin-top: 6rem;
+   }
+
+   &>:nth-child(3) {
+    margin-top: 12rem;
+    }
+ }
+}
+
 
 // border with dotted style
 .border-dotted{
